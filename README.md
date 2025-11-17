@@ -2,7 +2,7 @@
 
 **Version 4.1** - Web-based Single Sign-On (SSO) password generator
 
-[![License: GPL](https://img.shields.io/badge/License-GPL-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 
 ## Overview
 
@@ -107,7 +107,7 @@ This is the web-based version of iLogin. For a command-line Python version, see:
 
 ## License
 
-GPL - Copyright Alin Voinea
+MIT License - See [LICENSE](LICENSE) file for details.
 
 ## Contributing
 
