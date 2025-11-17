@@ -1,0 +1,240 @@
+/** Public template - Modernized for mobile */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background: #FFF;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  line-height: 1.5;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+h1 {
+  margin: 0;
+  background: #493E2B;
+  text-align: center;
+  padding: 1em;
+  font-size: clamp(1.5rem, 5vw, 2rem);
+}
+
+.footer {
+  background: #493E2B;
+  text-align: center;
+  padding: 1.5em;
+  margin-top: auto;
+}
+
+.footer a, .footer a:link, .footer a:visited, .footer a:hover {
+  color: #fff;
+  font-size: 90%;
+  text-decoration: none;
+}
+
+h1 a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.content {
+  flex: 1;
+  max-width: 600px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.advanced {
+  display: none;
+  width: 100%;
+  margin-top: 1em;
+}
+
+.content form {
+  padding-top: 1em;
+}
+
+.content dl {
+  margin: 0;
+  padding: 0;
+}
+
+.content dt {
+  font-size: clamp(1rem, 3vw, 1.2rem);
+  margin-top: 1em;
+  font-weight: 500;
+}
+
+.content dd {
+  margin: 0.5em 0 0 0;
+}
+
+.advanced dt {
+  display: flex;
+  align-items: center;
+  margin-top: 0.75em;
+  font-size: 1rem;
+}
+
+.advanced dd {
+  margin: 0.5em 0 0 0;
+}
+
+.advanced input[type=number],
+.advanced select {
+  width: 100%;
+  max-width: 120px;
+  padding: 0.5em;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+label {
+  cursor: pointer;
+  user-select: none;
+}
+
+.content input[type=text],
+.content input[type=password],
+.content input[type=submit] {
+  width: 100%;
+  font-size: clamp(1rem, 3vw, 1.2rem);
+  padding: 0.75em;
+  border-radius: 4px;
+}
+
+.content input[type=text],
+.content input[type=password] {
+  border: 2px solid #ccc;
+  transition: border-color 0.3s;
+}
+
+.content input[type=text]:focus,
+.content input[type=password]:focus {
+  outline: none;
+  border-color: #493E2B;
+}
+
+.content input[type=submit] {
+  background: #493E2B;
+  color: white;
+  border: none;
+  cursor: pointer;
+  margin-top: 1em;
+  font-weight: 600;
+  transition: background-color 0.3s;
+  min-height: 48px;
+}
+
+.content input[type=submit]:hover {
+  background: #5a4d36;
+}
+
+.content input[type=submit]:active {
+  background: #3a2f1f;
+}
+
+.content input[type=checkbox] {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+}
+
+.content dd.buttons {
+  width: 100%;
+  margin-top: 1.5em;
+}
+
+.results {
+  background-color: #ff9;
+  padding: 1.5em;
+  margin-top: 1.5em;
+  border-radius: 8px;
+  word-break: break-all;
+}
+
+.er {
+  color: yellow;
+}
+
+.acValue {
+  text-align: center;
+  font-size: clamp(1.2rem, 4vw, 1.8rem);
+  color: green;
+  font-weight: 600;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+.acFragment {
+  padding: 0 0.15em;
+}
+
+#acSpaceNote {
+  font-size: clamp(0.85rem, 2.5vw, 1rem);
+  color: #777;
+  margin: 1em 0 0 0;
+  text-align: center;
+}
+
+/* Advanced options toggle styling */
+.content dt.advanced-toggle {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 1em;
+  padding: 0.5em 0;
+}
+
+.content dd.advanced-checkbox {
+  margin: 0;
+}
+
+/* Mobile-specific improvements */
+@media (max-width: 480px) {
+  h1 {
+    padding: 0.75em;
+  }
+
+  .content {
+    padding: 0 0.75rem;
+  }
+
+  .footer {
+    padding: 1em;
+  }
+}
+
+/* Larger screens */
+@media (min-width: 768px) {
+  .content {
+    padding: 1em 2rem;
+  }
+
+  .advanced {
+    display: none;
+  }
+
+  .advanced.show {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.5em 1em;
+    align-items: center;
+  }
+
+  .advanced dt {
+    margin: 0;
+    text-align: right;
+  }
+
+  .advanced dd {
+    margin: 0;
+    text-align: left;
+  }
+}
+
