@@ -1,0 +1,78 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta name="title" content="iloginr: login anywhere, anytime" />
+    <meta name="description" content="Single Sign-On script (SSO) that allows you to generate passwords for each online service you're using" />
+    <title>iloginr: login anywhere, anytime</title>
+
+    <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="google-site-verification" content="4ShjLAwqSzcUvoP3KUGOdzRdQ9952AG72taDwyq9Sxs" />
+
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+    <link type="text/css" rel="stylesheet" href="stylesheets/iloginr.css" />
+
+  </head>
+  <body>
+    <div class="content">
+      <h1>
+        <a title="iloginr" href="/">
+          <strong>ilogin</strong><strong class="er">r</strong>
+          <strong>4.1</strong>
+        </a>
+      </h1>
+      <form action="." method="post">
+        <dl>
+          <dt><label for="service">Service / URL</label></dt>
+          <dd><input type="text" name="service" id="service" /></dd>
+          <dt><label for="password">Master password</label></dt>
+          <dd><input type="password" name="password" id="password" /></dd>
+
+          <dt style="float: left; padding: 0.5em 0"><label for="advanced">Advanced option</label></dt>
+          <dd style="float: right; width: auto; padding: 1em 0"><input type="checkbox" name="advanced" id="advanced" /></dd>
+
+
+          <div class="advanced">
+            <dt><label for="appVersion">App Version</label></dt>
+            <dd>
+              <select name="appVersion" id="appVersion">
+                <option value="3" selected="selected">3.0</option>
+                <option value="2">2.0</option>
+                <option value="1">1.0</option>
+              </select>
+            </dd>
+
+            <dt><label for="caps">Use capital letters</label></dt>
+            <dd><input type="checkbox" name="caps" id="caps" /></dd>
+
+            <dt><label for="numbers">Use numbers</label></dt>
+            <dd><input type="checkbox" name="numbers" id="numbers" /></dd>
+
+            <dt><label for="special">Use special characters</label></dt>
+            <dd><input type="checkbox" name="special" id="special" /></dd>
+
+            <dt><label for="length">Password length</label></dt>
+            <dd><input type="number" name="length" id="length" value="16" /></dd>
+
+            <dt><label for="version">Password version</label></dt>
+            <dd><input type="number" name="version" id="version" value="1" /></dd>
+
+          </div>
+          <dd class="buttons"><input type="submit" name="submit" value="ilogin" /></dd>
+      </form>
+
+      <div class="results">
+        <div class="acValue"></div>
+        <div id="acSpaceNote">No need to memorize this password. Ignore spaces.</div>
+      </div>
+    </div>
+
+  <div class="footer">
+    <a href="https://pypi.python.org/pypi/ilogin">&copy; GPL - Alin Voinea</a>
+  </div>
+  <!-- Scripts -->
+  <script src="scripts/jquery.min.js" type="text/javascript"></script>
+  <script src="scripts/iloginr.js" type="text/javascript"></script>
+  </body>
+</html>
